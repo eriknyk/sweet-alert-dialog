@@ -5,16 +5,12 @@ group = GROUP
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 13
-        targetSdkVersion 27
+        minSdkVersion 21
+        targetSdkVersion 30
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     buildTypes {
         release {
@@ -23,7 +19,9 @@ android {
             shrinkResources true
         }
     }
-    buildToolsVersion '27.0.3'
+    lint {
+        abortOnError false
+    }
 }
 
 dependencies {
