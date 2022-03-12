@@ -12,8 +12,8 @@ task sourceJar(type: Jar) {
 afterEvaluate {
     publishing {
         repositories {
-            def u = project.findProperty("gpr.user") ?: System.env.GH_USERNAME as String
-            def p = project.findProperty("gpr.key") ?: System.env.GH_TOKEN as String
+            def u = project.findProperty("gpr.user") ?: System.env.GITHUB_USER as String
+            def p = project.findProperty("gpr.key") ?: System.env.GITHUB_TOKEN as String
 
             println("GH User: " + u)
             println("Sendng version: " + version + '...')
