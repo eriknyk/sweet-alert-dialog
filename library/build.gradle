@@ -33,15 +33,7 @@ afterEvaluate {
 
                 groupId 'com.github.eriknyk'
                 artifactId 'sweetalert'
-                version '2.0.5'
-            }
-
-            debug(MavenPublication) {
-                from components.debug
-
-                groupId 'com.github.eriknyk'
-                artifactId 'sweetalert'
-                version '2.0.5'
+                version '2.0.6'
             }
         }
     }
@@ -50,6 +42,8 @@ afterEvaluate {
         maven { url "https://plugins.gradle.org/m2/" }
     }
 }
+
+gradlePlugin { automatedPublishing = false }
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
