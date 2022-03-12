@@ -43,8 +43,6 @@ afterEvaluate {
     }
 }
 
-gradlePlugin { automatedPublishing = false }
-
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
