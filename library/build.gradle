@@ -28,20 +28,23 @@ afterEvaluate {
 }
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk 31
 
     defaultConfig {
-        minSdkVersion 19
-        compileSdkVersion 31
-        targetSdkVersion 30
+        minSdk 19
+        targetSdk 30
     }
     lint {
         abortOnError false
     }
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
 }
 
 dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.pnikosis:materialish-progress:1.7'
 }
 

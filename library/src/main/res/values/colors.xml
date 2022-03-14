@@ -2,7 +2,7 @@
 <resources>
     <color name="float_transparent">#00000000</color>
     <color name="custom_float_bg">#F27474</color>
-    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="swal_dialog_bg_color">#FFFFFF</color>
     <color name="button_text_color">#FFFFFF</color>
     <color name="gray_btn_bg_color">#D0D0D0</color>
     <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
@@ -21,11 +21,6 @@
     <color name="material_deep_teal_20">#ff80cbc4</color>
     <color name="material_deep_teal_50">#ff009688</color>
 
-    <color name="title_color">#575757</color>
-    <color name="title_color_dark">#fff</color>
-    <color name="message_color">#797979</color>
-    <color name="message_color_dark">#fff</color>
-
     <!-- color from original game-->
     <color name="main_green_color">#6bd505</color>
     <color name="main_green_stroke_color">#60bf04</color>
@@ -41,6 +36,8 @@
     <color name="main_disabled_color">#838383</color>
     <color name="main_disabled_stroke_color">#707070</color>
 
+    <color name="swal_title_color">#575757</color>
+    <color name="swal_message_color">#797979</color>
     <color name="swal_confirm_color">#227EC7</color>
     <color name="swal_confirm_stroke_color">#186BAE</color>
     <color name="swal_cancel_color">#DD6B55</color>

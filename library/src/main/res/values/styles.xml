@@ -10,9 +10,9 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.4</item>
 
-        <item name="sweet_alert_bg_drawable">@drawable/dialog_background</item>
-        <item name="sweet_alert_title_text_color">@color/title_color</item>
-        <item name="sweet_alert_content_text_color">@color/message_color</item>
+        <item name="swal_dialog_bg_drawable">@drawable/dialog_background</item>
+        <item name="swal_dialog_title_text_color">@color/swal_title_color</item>
+        <item name="swal_dialog_content_text_color">@color/swal_message_color</item>
     </style>
 
     <style name="swal_dialog">

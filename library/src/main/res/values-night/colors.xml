@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="sweet_dialog_bg_color">#e6222222</color>
+    <color name="swal_title_color">#E6E6E6</color>
+    <color name="swal_message_color">#797979</color>
+    <color name="swal_dialog_bg_color">#e6222222</color>
     <color name="swal_confirm_color">#0D4775</color>
     <color name="swal_confirm_stroke_color">#0C3557</color>
     <color name="swal_cancel_color">#850303</color>

@@ -12,7 +12,7 @@
         <attr name="customPivotY" format="fraction" />
     </declare-styleable>
 
-    <attr name="sweet_alert_bg_drawable" format="reference" />
-    <attr name="sweet_alert_title_text_color" format="color|reference" />
-    <attr name="sweet_alert_content_text_color" format="color|reference" />
+    <attr name="swal_dialog_bg_drawable" format="reference" />
+    <attr name="swal_dialog_title_text_color" format="color|reference" />
+    <attr name="swal_dialog_content_text_color" format="color|reference" />
 </resources>

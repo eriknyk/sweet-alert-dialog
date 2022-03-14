@@ -137,7 +137,7 @@
             android:gravity="center"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textColor="?attr/sweet_alert_title_text_color"
+            android:textColor="?attr/swal_dialog_title_text_color"
             android:textSize="19sp"
             android:visibility="gone"
             tools:text="Title"
@@ -154,7 +154,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textAlignment="center"
-            android:textColor="?attr/sweet_alert_content_text_color"
+            android:textColor="?attr/swal_dialog_content_text_color"
             android:textSize="16sp"
             android:visibility="gone"
             tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
@@ -182,7 +182,7 @@
             android:paddingTop="10dp"
             android:visibility="visible">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cancel_button"
                 style="@style/swal_cancel_button"
                 android:layout_marginRight="25dp"
@@ -190,7 +190,7 @@
                 tools:text="cancel"
                 tools:visibility="visible" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/neutral_button"
                 style="@style/swal_neutral_button"
                 android:layout_marginLeft="-10dp"
@@ -199,7 +199,7 @@
                 tools:text="neutral"
                 tools:visibility="visible" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/confirm_button"
                 style="@style/swal_confirm_button"
                 android:text="Ok"
