@@ -11,29 +11,13 @@ task sourceJar(type: Jar) {
 
 afterEvaluate {
     publishing {
-        repositories {
-            def u = project.findProperty("gpr.user") ?: System.env.GITHUB_USER as String
-            def p = project.findProperty("gpr.key") ?: System.env.GITHUB_TOKEN as String
-
-            println("GH User: " + u)
-            println("Sendng version: " + version + '...')
-
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/eriknyk/sweet-alert-dialog")
-                credentials {
-                    username = u
-                    password = p
-                }
-            }
-        }
         publications {
             release(MavenPublication) {
                 from components.release
 
                 groupId 'com.github.eriknyk'
                 artifactId 'sweetalert'
-                version '2.0.6'
+                version '2.1.0'
             }
         }
     }
