@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+    </style>
 
     <style name="description_style">
         <item name="android:layout_width">250dp</item>
@@ -8,4 +23,28 @@
         <item name="android:textColor">#797979</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+
+<!--    <style name="swal_button" parent="android:Widget.Button">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:minWidth">85dp</item>-->
+<!--        <item name="android:layout_height">40dp</item>-->
+<!--        <item name="android:background">@drawable/gray_button_background</item>-->
+<!--        <item name="android:textSize">17sp</item>-->
+<!--        <item name="android:paddingLeft">21dp</item>-->
+<!--        <item name="android:paddingRight">21dp</item>-->
+<!--        <item name="android:textColor">@color/button_text_color</item>-->
+<!--        <item name="android:layout_weight">1</item>-->
+<!--        <item name="android:lines">1</item>-->
+<!--    </style>-->
+
+<!--    <style name="swal_confirm_button" parent="swal_button">-->
+<!--        <item name="android:background">@drawable/swal_confirm_button_bg</item>-->
+<!--    </style>-->
+<!--    <style name="swal_cancel_button" parent="swal_button">-->
+<!--        <item name="android:background">@drawable/swal_cancel_button_bg</item>-->
+<!--    </style>-->
+<!--    <style name="swal_neutral_button" parent="swal_button">-->
+<!--        <item name="android:background">@drawable/swal_neutral_button_bg</item>-->
+<!--    </style>-->
 </resources>

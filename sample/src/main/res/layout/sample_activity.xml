@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFF">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,16 +17,6 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/logo_big" />
 
-        <CheckBox
-            android:id="@+id/dark_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/logo_img"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:text="Dark style"
-            android:textColor="@android:color/black" />
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +25,6 @@
             android:gravity="center"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/txt_0"
                 style="@style/description_style"
@@ -44,7 +32,8 @@
 
             <Button
                 android:id="@+id/progress_dialog"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -55,7 +44,8 @@
 
             <Button
                 android:id="@+id/basic_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -66,7 +56,8 @@
 
             <Button
                 android:id="@+id/basic_test_without_buttons"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -77,7 +68,8 @@
 
             <Button
                 android:id="@+id/under_text_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -87,7 +79,8 @@
 
             <Button
                 android:id="@+id/styled_text_and_stroke"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -98,7 +91,8 @@
 
             <Button
                 android:id="@+id/error_text_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -109,7 +103,8 @@
 
             <Button
                 android:id="@+id/success_text_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -121,7 +116,8 @@
 
             <Button
                 android:id="@+id/warning_confirm_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -132,7 +128,8 @@
 
             <Button
                 android:id="@+id/warning_cancel_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -143,7 +140,8 @@
 
             <Button
                 android:id="@+id/custom_img_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -154,7 +152,8 @@
 
             <Button
                 android:id="@+id/neutral_btn_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -165,7 +164,8 @@
 
             <Button
                 android:id="@+id/disabled_btn_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
@@ -176,9 +176,22 @@
 
             <Button
                 android:id="@+id/custom_view_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
+
+            <TextView
+                android:id="@+id/txt_01"
+                style="@style/description_style"
+                android:text="Show all buttons" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/custom"
+                android:layout_margin="10dp"
+                android:text="Try me!"/>
 
             <TextView
                 android:id="@+id/txt_11"
@@ -187,7 +200,8 @@
 
             <Button
                 android:id="@+id/custom_btn_colors_test"
-                style="@style/dialog_blue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 

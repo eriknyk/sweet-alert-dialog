@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Customs -->
+<!--    <color name="sweet_dialog_bg_color" tools:override="true">#ffffff</color>-->
+<!--    <color name="swal_confirm_color">#227EC7</color>-->
+<!--    <color name="swal_confirm_stroke_color">#186BAE</color>-->
+<!--    <color name="swal_cancel_color">#DD6B55</color>-->
+<!--    <color name="swal_cancel_stroke_color">#CD5B55</color>-->
+<!--    <color name="swal_neutral_color">#515151</color>-->
+<!--    <color name="swal_neutral_stroke_color">#000000</color>-->
+</resources>

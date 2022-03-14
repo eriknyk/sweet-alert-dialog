@@ -88,9 +88,6 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     public static final int CUSTOM_IMAGE_TYPE = 4;
     public static final int PROGRESS_TYPE = 5;
 
-
-    public static boolean DARK_STYLE = false;
-
     //aliases
     public final static int BUTTON_CONFIRM = DialogInterface.BUTTON_POSITIVE;
     public final static int BUTTON_CANCEL = DialogInterface.BUTTON_NEGATIVE;
@@ -113,7 +110,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     }
 
     public SweetAlertDialog(Context context, int alertType) {
-        super(context, DARK_STYLE ? R.style.alert_dialog_dark : R.style.alert_dialog_light);
+        super(context, R.style.alert_dialog);
         setCancelable(true);
         setCanceledOnTouchOutside(true); //TODO was false
 
@@ -237,10 +234,11 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         mProgressFrame.setVisibility(View.GONE);
 
         mConfirmButton.setVisibility(mHideConfirmButton ? View.GONE : View.VISIBLE);
+        Drawable prevBg = mConfirmButton.getBackground();
 
         adjustButtonContainerVisibility();
 
-        mConfirmButton.setBackgroundResource(R.drawable.green_button_background);
+        mConfirmButton.setBackground(prevBg);
         mErrorFrame.clearAnimation();
         mErrorX.clearAnimation();
         mSuccessTick.clearAnimation();

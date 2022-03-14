@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="custom_confirm_bg" format="reference" />
+    <attr name="swal_confirm_button" format="reference" />
+</resources>

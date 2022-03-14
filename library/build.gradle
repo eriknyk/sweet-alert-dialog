@@ -1,27 +1,67 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 version = VERSION_NAME
 group = GROUP
 
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set("sources")
+}
+
+afterEvaluate {
+    publishing {
+        repositories {
+            def u = project.findProperty("gpr.user") ?: System.env.GITHUB_USER as String
+            def p = project.findProperty("gpr.key") ?: System.env.GITHUB_TOKEN as String
+
+            println("GH User: " + u)
+            println("Sendng version: " + version + '...')
+
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/eriknyk/sweet-alert-dialog")
+                credentials {
+                    username = u
+                    password = p
+                }
+            }
+        }
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId 'com.github.eriknyk'
+                artifactId 'sweetalert'
+                version '2.0.6'
+            }
+        }
+    }
+    repositories {
+        maven { url "https://jcenter.bintray.com" }
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 9
+        minSdkVersion 19
+        compileSdkVersion 31
+        targetSdkVersion 30
     }
-
-    lintOptions {
+    lint {
         abortOnError false
     }
-    buildToolsVersion '27.0.3'
+
 }
 
 dependencies {
     implementation 'com.pnikosis:materialish-progress:1.7'
 }
 
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
 /* upload command:
     gradlew -p library clean build uploadArchives --info
  */

@@ -10,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.app.AppCompatDelegate;
+
 import cn.pedant.SweetAlert.Constants;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -19,13 +21,15 @@ public class SampleActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_activity);
 
         int[] btnIds = {
-                R.id.basic_test, R.id.styled_text_and_stroke, R.id.basic_test_without_buttons, R.id.under_text_test,
+                R.id.custom, R.id.basic_test, R.id.styled_text_and_stroke, R.id.basic_test_without_buttons, R.id.under_text_test,
                 R.id.error_text_test, R.id.success_text_test, R.id.warning_confirm_test, R.id.warning_cancel_test,
-                R.id.custom_img_test, R.id.progress_dialog, R.id.neutral_btn_test, R.id.disabled_btn_test, R.id.dark_style,
+                R.id.custom_img_test, R.id.progress_dialog, R.id.neutral_btn_test, R.id.disabled_btn_test,
                 R.id.custom_view_test, R.id.custom_btn_colors_test
         };
         for (Integer id : btnIds) {
@@ -37,6 +41,15 @@ public class SampleActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.custom:
+                new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
+                        .setTitleText("Custom view")
+                        .setContentText("Custom with styles")
+                        .setCancelButton("cancel red", null)
+                        .setNeutralButton("neutral cyan", null)
+                        .setConfirmButton("confirm blue", null)
+                        .show();
+                break;
             case R.id.basic_test:
                 SweetAlertDialog sd = new SweetAlertDialog(this);
                 sd.setCancelable(true);
@@ -213,25 +226,12 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                 disabledBtnDialog.show();
                 break;
 
-            case R.id.dark_style:
-                if (((CheckBox) v).isChecked()) {
-                    SweetAlertDialog.DARK_STYLE = true;
-                } else {
-                    SweetAlertDialog.DARK_STYLE = false;
-                }
-                break;
-
             case R.id.custom_view_test:
                 final EditText editText = new EditText(this);
                 final CheckBox checkBox = new CheckBox(this);
                 editText.setText("Some edit text");
                 checkBox.setChecked(true);
                 checkBox.setText("Some checkbox");
-
-                if (SweetAlertDialog.DARK_STYLE) {
-                    editText.setTextColor(Color.WHITE);
-                    checkBox.setTextColor(Color.WHITE);
-                }
 
                 LinearLayout linearLayout = new LinearLayout(getApplicationContext());
                 linearLayout.setOrientation(LinearLayout.VERTICAL);

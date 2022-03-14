@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sweet_dialog_bg_color">#e6222222</color>
+    <color name="swal_confirm_color">#0D4775</color>
+    <color name="swal_confirm_stroke_color">#0C3557</color>
+    <color name="swal_cancel_color">#850303</color>
+    <color name="swal_cancel_stroke_color">#701712</color>
+    <color name="swal_neutral_color">#535353</color>
+    <color name="swal_neutral_stroke_color">#1E1E1E</color>
+</resources>
