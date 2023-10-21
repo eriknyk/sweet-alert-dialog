@@ -26,6 +26,30 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/txt_01"
+                style="@style/description_style"
+                android:text="Show aligned text to the left" />
+
+            <Button
+                android:id="@+id/aligned_left_text_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Try me!" />
+
+            <TextView
+                android:id="@+id/txt_01"
+                style="@style/description_style"
+                android:text="Show aligned text to the right" />
+
+            <Button
+                android:id="@+id/aligned_right_text_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Try me!" />
+
+            <TextView
                 android:id="@+id/txt_0"
                 style="@style/description_style"
                 android:text="Show material progress" />

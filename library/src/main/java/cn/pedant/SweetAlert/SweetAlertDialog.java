@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -46,6 +47,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     private View mCustomView;
     private String mTitleText;
     private String mContentText;
+    private int mTextAlign = -1;
     private boolean mShowCancel;
     private boolean mShowContent;
     private String mCancelText;
@@ -368,11 +370,27 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
             if (contentTextSize != 0) {
                 mContentTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, spToPx(contentTextSize, getContext()));
             }
-            mContentTextView.setText(Html.fromHtml(mContentText));
+            String ct = mContentText.replaceAll("(\r\n|\n\r|\r|\n)", "<br>");
+            mContentTextView.setText(Html.fromHtml(ct));
             mContentTextView.setVisibility(View.VISIBLE);
+            if (mTextAlign != -1) {
+                mContentTextView.setTextAlignment(mTextAlign);
+                mContentTextView.setGravity(mTextAlign == View.TEXT_ALIGNMENT_TEXT_END ? Gravity.RIGHT : Gravity.LEFT);
+            }
             mCustomViewContainer.setVisibility(View.GONE);
         }
         return this;
+    }
+
+    public SweetAlertDialog setContentText(String text, int textAlign) {
+        mTextAlign = textAlign;
+        SweetAlertDialog d = setContentText(text);
+        if (mContentTextView != null && mContentText != null && mTextAlign != -1) {
+            mContentTextView.setTextAlignment(mTextAlign);
+            mContentTextView.setGravity(mTextAlign == View.TEXT_ALIGNMENT_TEXT_END ? Gravity.RIGHT : Gravity.LEFT);
+        }
+
+        return d;
     }
 
     public static int spToPx(float sp, Context context) {
