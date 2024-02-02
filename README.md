@@ -17,8 +17,9 @@ Fixed Things
 This version is available on Gitpack see **Setup**  section
 
 
----
+** For latest version see repo tags: (2.1.3) https://github.com/eriknyk/sweet-alert-dialog/tags **
 
+---
 
 Sweet Alert Dialog
 ===================
@@ -72,7 +73,7 @@ The simplest way to use SweetAlertDialog is to add the library as aar dependency
 	}
 
     dependencies {
-        implementation 'com.github.eriknyk:sweet-alert-dialog:2.1.2'
+        implementation 'com.github.eriknyk:sweet-alert-dialog:2.1.3'
     }
 
 ## Usage
