@@ -6,9 +6,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatDelegate;
 
@@ -26,15 +28,15 @@ public class SampleActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_activity);
 
-        int[] btnIds = {
-                R.id.custom, R.id.basic_test, R.id.styled_text_and_stroke, R.id.basic_test_without_buttons, R.id.under_text_test,
-                R.id.error_text_test, R.id.success_text_test, R.id.warning_confirm_test, R.id.warning_cancel_test,
-                R.id.custom_img_test, R.id.aligned_right_text_dialog, R.id.aligned_left_text_dialog, R.id.progress_dialog, R.id.neutral_btn_test, R.id.disabled_btn_test,
-                R.id.custom_view_test, R.id.custom_btn_colors_test
-        };
-        for (Integer id : btnIds) {
-            findViewById(id).setOnClickListener(this);
-            findViewById(id).setOnTouchListener(Constants.FOCUS_TOUCH_LISTENER);
+        LinearLayout container = (LinearLayout) findViewById(R.id.elements_container);
+
+        for(int i =0; i < container.getChildCount(); i++) {
+            View v = container.getChildAt(i);
+            if(v instanceof Button) {
+                Button button = (Button) v;
+                button.setOnClickListener(this);
+                button.setOnTouchListener(Constants.FOCUS_TOUCH_LISTENER);
+            }
         }
     }
 
@@ -275,6 +277,13 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                         .show();
                 break;
 
+            case R.id.custom_btn_large_text_test:
+                new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                        .setTitleText("Aligned text view")
+                        .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", View.TEXT_ALIGNMENT_TEXT_START)
+                        .setConfirmButton("ok", null)
+                        .show();
+                break;
         }
     }
 }

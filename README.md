@@ -1,3 +1,25 @@
+(!) Just another maintained version
+---
+
+Added/Updated Things
+---
+
+- Dark Mode support
+- Added text alignment (Left|Right) capability
+- Updated compileSdk & targetSdk to 33
+ 
+Fixed Things
+---
+
+- FIX: androidx.appcompat.widget.AppCompatButton instead Button to fix broken bg colors when the app using MaterialComponents DayNight theme, update styles & colors
+- Fix: Large text being cut off
+
+This version is available on Gitpack see **Setup**  section
+
+
+---
+
+
 Sweet Alert Dialog
 ===================
 SweetAlert for Android, a beautiful and clever alert dialog
@@ -39,23 +61,18 @@ Inspired by JavaScript [SweetAlert](http://tristanedwards.me/sweetalert)
 ## Setup
 The simplest way to use SweetAlertDialog is to add the library as aar dependency to your build.
 
-**Maven**
-
-    <dependency>
-      <groupId>com.github.f0ris.sweetalert</groupId>
-      <artifactId>library</artifactId>
-      <version>1.6.2</version>
-      <type>aar</type>
-    </dependency>
-
 **Gradle**
 
-    repositories {
-        mavenCentral()
-    }
+    dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
 
     dependencies {
-        implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+        implementation 'com.github.eriknyk:sweet-alert-dialog:2.1.2'
     }
 
 ## Usage

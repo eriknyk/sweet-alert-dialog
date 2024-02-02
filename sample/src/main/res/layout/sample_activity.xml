@@ -18,6 +18,7 @@
             android:src="@drawable/logo_big" />
 
         <LinearLayout
+            android:id="@+id/elements_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/logo_img"
@@ -26,7 +27,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txt_01"
+                android:id="@+id/txt_001"
                 style="@style/description_style"
                 android:text="Show aligned text to the left" />
 
@@ -38,7 +39,7 @@
                 android:text="Try me!" />
 
             <TextView
-                android:id="@+id/txt_01"
+                android:id="@+id/txt_002"
                 style="@style/description_style"
                 android:text="Show aligned text to the right" />
 
@@ -229,6 +230,17 @@
                 android:layout_margin="10dp"
                 android:text="Try me!" />
 
+            <TextView
+                android:id="@+id/txt_12"
+                style="@style/description_style"
+                android:text="Alert with large text, ensure text not being cuted off" />
+
+            <Button
+                android:id="@+id/custom_btn_large_text_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Show alert with large text" />
         </LinearLayout>
 
     </RelativeLayout>
