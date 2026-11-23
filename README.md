@@ -13,11 +13,12 @@ Fixed Things
 
 - FIX: androidx.appcompat.widget.AppCompatButton instead Button to fix broken bg colors when the app using MaterialComponents DayNight theme, update styles & colors
 - Fix: Large text being cut off
+- Fix: Long messages scroll instead of pushing the buttons off screen
 
 This version is available on Gitpack see **Setup**  section
 
 
-** For latest version see repo tags: (2.1.3) https://github.com/eriknyk/sweet-alert-dialog/tags **
+** For latest version see repo tags: (2.1.4) https://github.com/eriknyk/sweet-alert-dialog/tags **
 
 ---
 
@@ -73,7 +74,7 @@ The simplest way to use SweetAlertDialog is to add the library as aar dependency
 	}
 
     dependencies {
-        implementation 'com.github.eriknyk:sweet-alert-dialog:2.1.3'
+        implementation 'com.github.eriknyk:sweet-alert-dialog:2.1.4'
     }
 
 ## Usage

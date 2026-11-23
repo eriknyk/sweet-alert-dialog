@@ -12,6 +12,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -189,6 +190,10 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         mDialogView = getWindow().getDecorView().findViewById(android.R.id.content);
         mTitleTextView = findViewById(R.id.title_text);
         mContentTextView = findViewById(R.id.content_text);
+        // Long messages scroll instead of pushing the buttons off screen.
+        mContentTextView.setMaxHeight(getContext().getResources().getDisplayMetrics().heightPixels / 2);
+        mContentTextView.setMovementMethod(new ScrollingMovementMethod());
+        mContentTextView.setVerticalScrollBarEnabled(true);
         mCustomViewContainer = findViewById(R.id.custom_view_container);
         mErrorFrame = findViewById(R.id.error_frame);
         mErrorX = mErrorFrame.findViewById(R.id.error_x);
