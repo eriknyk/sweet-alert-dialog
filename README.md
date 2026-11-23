@@ -20,6 +20,33 @@ This version is available on Gitpack see **Setup**  section
 
 ** For latest version see repo tags: (2.1.4) https://github.com/eriknyk/sweet-alert-dialog/tags **
 
+Changelog
+---
+
+### 2.1.4 (2026-11-23)
+- Fixed: Long messages scroll (up to half the screen height) instead of pushing the buttons off screen.
+
+### 2.1.3 (2024-02-02)
+- Fixed: Large message text being cut off.
+- Changed: compileSdk and targetSdk updated to 33.
+- Docs: Setup section updated for JitPack.
+
+### 2.1.2 (2023-10-20)
+- Added: Text alignment for the message, `setContentText(String text, int textAlign)` (e.g. `View.TEXT_ALIGNMENT_TEXT_START`).
+
+### 2.1.1 (2022-03-14)
+- Fixed: Buttons use `AppCompatButton`, so their background colors work with MaterialComponents DayNight themes. Styles and colors updated.
+
+### 2.1.0 (2022-03-14)
+- Added: Theming support; light and dark mode follow the app theme.
+- Fixed: Gradle publishing task.
+
+### 2.0.0 – 2.0.7 (2022-03-11 – 2022-03-12)
+- Build: GitHub Actions publish workflow. No library changes.
+
+### 1.6.2 and earlier
+- Releases from the original [F0RIS/sweet-alert-dialog](https://github.com/F0RIS/sweet-alert-dialog).
+
 ---
 
 Sweet Alert Dialog
